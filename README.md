@@ -15,14 +15,6 @@ NUMEQUALTO value – Print out the number of variables that are currently set to
 
 END – Exit the program. Your program will always receive this as its last command.
 
-Commands will be fed to your program one at a time, with each command on its own line. Any output that your program generates should end with a newline character. Here are some example command sequences:
-
-INPUT	      OUTPUT
-SET ex 10
-GET ex      10
-UNSET ex
-GET ex      NULL
-END
 
 Transaction Commands
 
@@ -34,20 +26,6 @@ ROLLBACK – Undo all of the commands issued in the most recent transaction bloc
 
 COMMIT – Close all open transaction blocks, permanently applying the changes made in them. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.
 
-Any data command that is run outside of a transaction block should commit immediately. Here are some example command sequences:
-
-INPUT	   OUTPUT
-BEGIN
-SET a 10
-GET a    10
-BEGIN
-SET a 20
-GET a    20
-ROLLBACK
-GET a    10
-ROLLBACK
-GET a    NULL
-END
 
 Performance Considerations
 
