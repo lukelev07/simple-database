@@ -1,7 +1,7 @@
-thumbtack-challenge
+Simple Database
 ===================
 
-My implementation of a simple database from the Thumbtack coding challenge.
+My implementation of a simple database in Java.
 
 Your database should accept the following commands:
 
