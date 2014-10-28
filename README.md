@@ -25,8 +25,3 @@ BEGIN – Open a new transaction block. Transaction blocks can be nested; a BEGI
 ROLLBACK – Undo all of the commands issued in the most recent transaction block, and close the block. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.
 
 COMMIT – Close all open transaction blocks, permanently applying the changes made in them. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.
-
-
-Performance Considerations
-
-The most common operations are GET, SET, UNSET, and NUMEQUALTO. All of these commands should have an expected worst-case runtime of O(log N) or better, where N is the total number of variables stored in the database.
